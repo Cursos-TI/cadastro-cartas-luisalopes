@@ -23,7 +23,7 @@ int main() {
   */
 
   // Área para entrada de dados
-  print("Boas-vindas ao Desafio Super Trunfo - Países!\n");
+  printf("Boas-vindas ao Desafio Super Trunfo - Países!\n");
   
   printf("Para poder jogar o Super Trunfo, vamos primeiro precisar registrar nossas cartas no montante.\n");
 
@@ -36,7 +36,7 @@ int main() {
   printf("Agora digite o código da carta (letra do estado + código de 01 a 04, tudo junto): ");
   fgets(codigo_a, 5, stdin);
 
-  getchar(); //Limpeza de buffer.
+  //getchar(); //Limpeza de buffer.
   printf("Digite o nome da cidade que vai ficar nesta carta: ");
   fgets(cidade_a, 50, stdin);
 
@@ -64,7 +64,7 @@ int main() {
   printf("Agora coloque o código da segunda carta (letra do estado + código de 01 a 04, tudo junto): ");
   fgets(codigo_b, 5, stdin);
 
-  getchar(); //Limpeza de buffer.
+  //getchar(); //Limpeza de buffer.
   printf("Escreva agora o nome da cidade da segunda carta: ");
   fgets(cidade_b, 50, stdin);
 
@@ -93,7 +93,7 @@ int main() {
   printf("Número de pontos turísticos: %d\n\n", n_turismo_a);
 
   // Exibição da carta 2.
-  printf("Carta 2:");
+  printf("Carta 2:\n");
   printf("Estado: %c\nCódigo: %s\n", estado_b, codigo_b);
   printf("Nome da cidade: %s\nPopulação: %d\n", cidade_b, qtd_pop_b);
   printf("Área: %.2f km^2\nPIB: %.2f\n", area_b, pib_b);
