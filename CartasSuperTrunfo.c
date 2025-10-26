@@ -33,10 +33,10 @@ int main() {
   scanf(" %c", &estado_a); //Coloquei espaço antes do %c para evitar problema de buffer ao apertar 'Enter'.
 
   getchar(); //Tive que ver no Stack Overflow como evitar o problema do buffer guardar 'Enter' como caractere ao usar o fgets. Essa foi uma solução.
-  printf("Agora digite o código da carta (letra do estado + código de 01 a 04): ");
+  printf("Agora digite o código da carta (letra do estado + código de 01 a 04, tudo junto): ");
   fgets(codigo_a, 5, stdin);
 
-  getchar();
+  getchar(); //Limpeza de buffer.
   printf("Digite o nome da cidade que vai ficar nesta carta: ");
   fgets(cidade_a, 50, stdin);
 
@@ -45,6 +45,42 @@ int main() {
 
   printf("Registre também a área, em quilômetros quadrados, da cidade; use ponto em vez de vírgula: ");
   scanf("%f", &area_a);
+
+  printf("Quase lá! Vamos botar o PIB da cidade agora. Lembre de usar ponto em vez de vírgula: ");
+  scanf("%f", &pib_a);
+
+  printf("Por fim, vamos agora adicionar quantos pontos turísticos essa cidade tem: ");
+  scanf("%d", &n_turismo_a);
+
+  printf("Terminamos o registro da primeira carta!\n");
+
+  // Aqui começa o registro da carta B01, do estado B.
+  printf("Vamos registrar a segunda carta?\n");
+
+  printf("Digite o estado da segunda carta (escolha uma letra de A a H): ");
+  scanf(" %c", &estado_b); //Mesmo espaço que coloquei no registro do estado da carta A.
+
+  getchar(); //Limpeza de buffer.
+  printf("Agora coloque o código da segunda carta (letra do estado + código de 01 a 04, tudo junto): ");
+  fgets(codigo_b, 5, stdin);
+
+  getchar(); //Limpeza de buffer.
+  printf("Escreva agora o nome da cidade da segunda carta: ");
+  fgets(cidade_b, 50, stdin);
+
+  printf("Digite o número da população desta cidade, sem espaços, vírgulas ou pontos: ");
+  scanf("%d", &qtd_pop_b);
+
+  printf("Agora preciso da área, em quilômetros quadrados, da cidade; use ponto em vez de vírgula; ");
+  scanf("%f", &area_b);
+
+  printf("Já estamos quase terminando!\nPode digitar o PIB da cidade; use ponto no lugar de vírgula: ");
+  scanf("%f", &pib_b);
+
+  printf("E agora vamos para a quantidade de pontos turísticos que a cidade tem: ");
+  scanf("%d", &n_turismo_b);
+
+  printf("Ufa! Acabamos de registrar nossas duas cartas!\n");
 
   // Área para exibição dos dados da cidade
   printf("Agora vamos ver as cartas que temos à nossa disposição!\n");
